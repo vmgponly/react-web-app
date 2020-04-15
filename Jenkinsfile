@@ -1,13 +1,22 @@
 pipeline
 {
   agent any
-  stages('Stage One')
+  
+  tools
   {
-    stage
+    nodejs 'node'
+  }
+  
+  stages
+  {
+    stage('Stage One')
     {
       steps
       {
-          println "Hi"
+          script
+        {
+          checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/damodarh/react-web-app.git']]]
+        }
       }
     }
   }
