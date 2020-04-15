@@ -25,7 +25,7 @@ pipeline
 						branches: 
 						[
 							[
-								name: '*/master'
+								name: '${RepoBranch}'
 							]
 						], 
 						doGenerateSubmoduleConfigurations: false, 
