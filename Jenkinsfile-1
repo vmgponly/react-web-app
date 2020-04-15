@@ -1,0 +1,27 @@
+pipeline
+{
+  agent any
+  
+  tools
+  {
+    nodejs  "node"
+	
+  }
+  
+  stages
+  {
+    stage('build')
+     {
+	   steps
+	   {
+	     script
+		 {
+		 
+		 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github_credetials', url: 'https://github.com/Aishwaryad5092/react-web-app.git']]])
+		 
+		 }
+	   
+	   }
+	 }
+  }
+}
