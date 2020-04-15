@@ -26,7 +26,6 @@ pipeline
          cd build/
          ls -ltr
          '''
-          
         
         }
       }
