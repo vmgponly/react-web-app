@@ -17,6 +17,7 @@ pipeline
 			{
 				script
 				{
+					cleanWs()
 					checkout changelog: false, 
 					poll: false, 
 					scm: 
