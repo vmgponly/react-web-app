@@ -28,7 +28,6 @@ pipeline
          cp frontend-${BUILD_NUMBER}.tar ${WORKSPACE}/
          ls -ltr
          '''
-          
         
         }
       }
